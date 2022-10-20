@@ -1,0 +1,147 @@
+.projects__flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: calc(50% - 48.5px);
+  min-height: 418px;
+  border-radius: 10px;
+  display: block;
+}
+
+.project_first {
+  width: 100%;
+  background-image: url("img/smart.jpg");
+  background-position: center calc(50% - 10px);
+  background-size: 107%;
+  background-repeat: no-repeat;
+  min-height: 417px;
+  position: relative;
+  margin-bottom: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  &:after {
+    background: linear-gradient(
+      89.99deg,
+      #1f3f68 3.62%,
+      rgba(31, 63, 104, 0.37) 97.78%
+    );
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 3;
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("img/smart.svg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    z-index: 4;
+  }
+}
+
+.project__content {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: $white;
+  padding: 23px 31px;
+}
+
+.project__content_first {
+  align-items: flex-end;
+  padding: 42.5px 48px;
+  max-width: 600px;
+}
+
+.project__heading {
+  font-size: 28px;
+  line-height: 164%;
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+
+.project__heading_first {
+  letter-spacing: 0.05em;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.project__text {
+  letter-spacing: 0.05em;
+  font-weight: 200;
+}
+
+.project_second {
+  background-image: url("img/app-01.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after {
+    background: linear-gradient(
+      308.85deg,
+      rgba(66, 165, 245, 0.4) -1.71%,
+      rgba(21, 101, 192, 0.6) 74.54%
+    );
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 3;
+  }
+}
+
+.project_third {
+  background-image: url("img/app-02.jpg");
+  background-position: calc(50% + 85px) top;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after {
+    background: linear-gradient(
+      306.48deg,
+      rgba(66, 165, 245, 0.4) 0%,
+      rgba(21, 101, 192, 0.6) 97.81%
+    );
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 3;
+  }
+}
+
+.projects__content {
+  padding-bottom: 192px;
+}
+
+.project__header {
+  margin-bottom: 96.85px;
+}
+
+.project_first {
+  margin-bottom: 95px;
+}

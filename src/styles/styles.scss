@@ -1,0 +1,244 @@
+@import "mixins.scss";
+@import "preferences.scss";
+
+//Galien
+@font-face {
+  font-family: "Galien";
+  src: url("fonts/Galien/d1243736bfe07b546f8f1e54e7804afb.eot"); /* IE9*/
+  src: url("fonts/Galien/d1243736bfe07b546f8f1e54e7804afb.woff2")
+      format("woff2"),
+    /* chrome firefox */
+      url("fonts/Galien/d1243736bfe07b546f8f1e54e7804afb.woff") format("woff"),
+    /* chrome firefox */
+      url("fonts/Galien/d1243736bfe07b546f8f1e54e7804afb.ttf")
+      format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  font-display: swap;
+}
+
+//UlrtaLight
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 200;
+  src: url("fonts/Gilroy-Font/Gilroy-UltraLight.eot"),
+    url("fonts/Gilroy-Font/Gilroy-UltraLight.ttf") format("truetype"),
+    url("fonts/Gilroy-Font/Gilroy-UltraLight.woff") format("woff");
+  font-display: swap;
+}
+
+//Light
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 300;
+  src: url("fonts/Gilroy-Font/Gilroy-Light.eot"),
+    url("fonts/Gilroy-Font/Gilroy-Light.ttf") format("truetype"),
+    url("fonts/Gilroy-Font/Gilroy-Light.woff") format("woff");
+  font-display: swap;
+}
+
+//Normal
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 400;
+  src: url("fonts/Gilroy-Font/Gilroy-Regular.eot"),
+    url("fonts/Gilroy-Font/Gilroy-Regular.ttf") format("truetype"),
+    url("fonts/Gilroy-Font/Gilroy-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+//Medium
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 500;
+  src: url("fonts/Gilroy-Font/Gilroy-Medium.eot"),
+    url("fonts/Gilroy-Font/Gilroy-Medium.ttf") format("truetype"),
+    url("fonts/Gilroy-Font/Gilroy-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+//SemiBold
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 600;
+  src: url("fonts/Gilroy-Font/Gilroy-SemiBold.eot"),
+    url("fonts/Gilroy-Font/Gilroy-SemiBold.ttf") format("truetype"),
+    url("fonts/Gilroy-Font/Gilroy-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  font-size: $fontSize;
+  color: $bodyColor;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+}
+
+._container {
+  max-width: $maxWidth;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $padding !important;
+  padding-right: $padding !important;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+  transition: color 0.2s;
+}
+
+img {
+  display: block;
+}
+
+*:focus {
+  outline: none;
+}
+
+.text {
+  letter-spacing: 0.04em;
+  line-height: 162%;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.text_white {
+  color: $white;
+}
+
+.section__title {
+  font-size: 36px;
+  line-height: 128%;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.section__title_white {
+  color: $white;
+}
+
+.btn {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 162%;
+  color: $white;
+  padding: 15px 30px;
+  max-width: 220px;
+  // height: 56px;
+  width: 100%;
+  background: $blue2;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: #4f8bc1;
+  }
+}
+
+.section-header {
+  display: flex;
+}
+
+.section-header__title {
+  max-width: 300px;
+  width: 100%;
+  margin-right: 19px;
+}
+
+.section-header {
+  margin-bottom: 97px;
+}
+
+.section-header__text {
+  max-width: 540px;
+}
+
+.logo__icon {
+  position: relative;
+  width: 48px;
+  display: block;
+}
+
+.logo__filled-circle {
+  width: 32px;
+  height: 32px;
+  background-color: #316099;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo__text-circle {
+  background-color: #ffffff;
+  border: 2.5px solid #316099;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 19px;
+  font-weight: 600;
+  color: $blue3;
+  line-height: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  color: $white;
+  font-weight: 500;
+}
+
+.data {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.data__icon {
+  margin-right: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.data__text {
+  font-size: 16px;
+  line-height: 162%;
+  letter-spacing: 0.0425em;
+  font-weight: 300;
+  max-width: 300px;
+}
